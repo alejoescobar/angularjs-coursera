@@ -10,7 +10,7 @@
     $scope.messageColor = '';
     $scope.borderColor = '';
     $scope.checkLunch = function() {
-      var filteredArray = filterArray($scope.lunch.split(','))
+      var filteredArray = filterArray($scope.lunch.replace(/\s/g, '').split(','))
       if (filteredArray.length > 3) {
         $scope.message = "Too much!";
         $scope.messageColor = 'green';
